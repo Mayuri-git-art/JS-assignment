@@ -1,0 +1,20 @@
+// ===============================
+// Question 3: Mirror Corridor
+// ===============================
+let N3 = parseInt(prompt("Enter N:"));
+let K3 = parseInt(prompt("Enter K:"));
+
+function isPalindrome(n) {
+    let s = n.toString();
+    return s === s.split('').reverse().join('');
+}
+
+let answer3 = -1;
+for (let x = 0; x <= 100000; x++) {
+    let val = N3 + x;
+    if (isPalindrome(val) && val % K3 === 0) {
+        answer3 = x;
+        break;
+    }
+}
+alert(answer3);
