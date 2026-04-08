@@ -1,0 +1,23 @@
+// ===============================
+// Question 2: Roll-Seed Lock
+// ===============================
+let N2 = parseInt(prompt("Enter N:"));
+let seed2 = parseInt(prompt("Enter seed:"));
+
+let current = N2;
+for (let i = 0; i < 3; i++) {
+    if (current % 2 === 0) {
+        current = current / 2 + seed2;
+    } else {
+        current = current * 3 - seed2;
+    }
+}
+
+let result2 = "NO";
+if (current >= 100 && current <= 999) {
+    let midDigit = Math.floor(current / 10) % 10;
+    if (midDigit === seed2) {
+        result2 = "YES";
+    }
+}
+alert(result2 + ", " + current);
