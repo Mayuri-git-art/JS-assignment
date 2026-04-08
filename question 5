@@ -1,0 +1,18 @@
+// ===============================
+// Question 5: Skipping Numbers
+// ===============================
+let N5 = parseInt(prompt("Enter N:"));
+let seed5 = parseInt(prompt("Enter seed:"));
+
+let m = 0;
+let sum = 0;
+let divisor = seed5 + 2;
+
+while (sum < N5) {
+    m++;
+    if (m % divisor !== 0) {
+        sum += m;
+    }
+}
+
+alert(m + " " + sum);
